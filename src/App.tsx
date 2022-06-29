@@ -8,10 +8,26 @@
  */
 import React from 'react';
 import './App.css';
+import MainPage from './views/MainPage';
+import PersonalCenter from './views/PersonalCenter';
+import HomePage from './views/MainPage/views/HomePage';
+import Article from './views/MainPage/views/Article';
+import Other from './views/MainPage/views/Other';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App(props: any) {
-
-	return <div className='App'>{props.children}hahhahaha</div>;
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<MainPage />}>
+					<Route path='home-page' element={<HomePage />}></Route>
+					<Route path='article' element={<Article />}></Route>
+					<Route path='other' element={<Other />}></Route>
+				</Route>
+				<Route path='personal-center' element={<PersonalCenter />}></Route>
+			</Routes>
+		</BrowserRouter>
+	);
 }
 
 export default App;
