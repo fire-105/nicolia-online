@@ -15,6 +15,7 @@ import Article from './views/MainPage/views/Article';
 import Other from './views/MainPage/views/Other';
 import NotFound from './views/404';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import '@/assets/styles/reset.css'
 
 function App(props: any) {
 	return (
