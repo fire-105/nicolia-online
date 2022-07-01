@@ -12,7 +12,7 @@ const MainPage = () => {
 		<>
 			主页
 			<div>
-				<Link to='home-page'>Invoices</Link>
+				<Link to='other'>Invoices</Link>
 				<Link to='article'>Team</Link>
 				<Outlet />
 			</div>

@@ -13,6 +13,7 @@ import PersonalCenter from './views/PersonalCenter';
 import HomePage from './views/MainPage/views/HomePage';
 import Article from './views/MainPage/views/Article';
 import Other from './views/MainPage/views/Other';
+import NotFound from './views/404';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App(props: any) {
@@ -20,11 +21,12 @@ function App(props: any) {
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={<MainPage />}>
-					<Route path='home-page' element={<HomePage />}></Route>
+					<Route index={true} element={<HomePage />}></Route>
 					<Route path='article' element={<Article />}></Route>
 					<Route path='other' element={<Other />}></Route>
 				</Route>
 				<Route path='personal-center' element={<PersonalCenter />}></Route>
+				<Route path='*' element={<NotFound />}></Route>
 			</Routes>
 		</BrowserRouter>
 	);
